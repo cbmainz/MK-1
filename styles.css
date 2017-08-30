@@ -1,3 +1,4 @@
+
 div {
   font-family: sans-serif;
 }
@@ -37,6 +38,7 @@ ul li {
 	top:0;
 	right:0;
 	margin:7px;
+	width: 100px;
 }
 
 .titles {

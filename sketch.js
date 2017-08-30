@@ -3,29 +3,29 @@ function preload() {
 	keyList = [LEFT_ARROW, UP_ARROW, DOWN_ARROW, RIGHT_ARROW, ' ', 'W', 'A', 'S', 'D', 'F', 'G'];
 
 	pitchPresets = [
-		{name:'major (high)', pitches:[60, 62, 64, 65, 67, 69, 71, 72, 74, 76, 77]},
-		{name:'major (low)', pitches:[48, 50, 52, 53, 55, 57, 59, 60, 62, 64, 65]},
-		{name:'minor pentatonic', pitches:[48, 51, 53, 55, 58, 60, 63, 65, 67, 70, 72]},
-		{name:'major pentatonic', pitches:[48, 50, 52, 55, 57, 60, 62, 64, 67, 69, 72]},
-		//{name:'whole tone', pitches:[48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68]},
-		{name:'major triads', pitches:[48, 52, 55, 60, 64, 67, 72, 76, 79, 83, 84]},
-		{name:'randomize!', pitches:[60, 62, 64, 65, 67, 69, 71, 72, 74, 76, 77]},
+		{name:'Dur (hoch)', pitches:[60, 62, 64, 65, 67, 69, 71, 72, 74, 76, 77]},
+		{name:'Dur (tief)', pitches:[48, 50, 52, 53, 55, 57, 59, 60, 62, 64, 65]},
+		{name:'Moll Pentatonik', pitches:[48, 51, 53, 55, 58, 60, 63, 65, 67, 70, 72]},
+		{name:'Dur Pentatonik', pitches:[48, 50, 52, 55, 57, 60, 62, 64, 67, 69, 72]},
+		{name:'Ganztonschritte', pitches:[48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68]},
+		{name:'Durdreiklang', pitches:[48, 52, 55, 60, 64, 67, 72, 76, 79, 83, 84]},
+		//{name:'Zufall', pitches:[60, 62, 64, 65, 67, 69, 71, 72, 74, 76, 77]},
 	];
 	
 	majorScale = [60, 62, 64, 65, 67, 69, 71, 72, 74, 76, 77];
 	
 	samplePresets = [
-		{name:'vibraphone', filename:'vibraphone'},
-		//{name:'piano', filename:'piano_C3'},
-		{name:'whistle', filename:'whistle'},
-		{name:'splurt', filename:'splurt'},
-		{name:'ooh', filename:'ooh'},
+		{name:'Klavier', filename:'piano_C3'},
+		{name:'Vibraphon', filename:'vibraphone'},
+		{name:'Pfeifen', filename:'whistle'},
+		//{name:'Furz', filename:'splurt'},
+		{name:'Ooh', filename:'ooh'},
 		//{name:'mouth rhythm', filename:'mouth-rhythm'}, 
-		{name:'acoustic bass', filename:'acoustic-bass'}, 
-		{name:'kalimba', filename:'kalimba'}, 
+		{name:'Bass', filename:'acoustic-bass'}, 
+		{name:'Kalimba', filename:'kalimba'}, 
 	];
 	
-	keySymbols = ['\u2190', '\u2191','\u2193','\u2192','sp'];
+	keySymbols = ['\u2190', '\u2191','\u2193','\u2192','\u2423'];
 	noteNames = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
 	keyColors = ['white', 'black', 'white', 'black', 'white', 'white', 'black', 'white', 'black',
 		'white', 'black', 'white'];
@@ -36,7 +36,7 @@ function preload() {
 	}
 	
 	audioSamples = [];
-	audioSamples[0] = loadSound('sounds/vibraphone.wav');
+	audioSamples[0] = loadSound('sounds/piano_C3.wav');
 
 	numPeaks = 390;	
 	
@@ -62,13 +62,13 @@ function preload() {
 	subtitleDiv = createElement('div');
 	subtitleDiv.addClass('subtitle');
 	subtitleDiv.parent(titlesDiv);
-	subtitleDiv.html('sampling keyboard for makey makey');
+	subtitleDiv.html('Sampling Keyboard f\u00FCr Makey Makey');
 
 	logoLink = createElement('a');
 	logoLink.attribute('href', 'http://makeymakey.com');
 	logoLink.attribute('target', '_blank');
 	logoLink.parent(outlineDiv);
-	logo = createImg('images/makey-makey-logo8.png');
+	logo = createImg('images/makey-makey-logo.svg');
 	logo.parent(logoLink);
 	logo.addClass('logo');
 
@@ -103,7 +103,7 @@ function preload() {
     
     waveformInstructionLabel = createElement('div');
     waveformInstructionLabel.parent(waveFormDiv);
-    waveformInstructionLabel.html('click waveform to set start time');
+    waveformInstructionLabel.html('Klicke in das Feld, um die Startzeit zu ver\u00e4nden.');
     waveformInstructionLabel.addClass('notification');
     waveformInstructionLabel.style('visibility', 'hidden'); 
     
@@ -126,8 +126,8 @@ function preload() {
 	canvas.parent(waveFormDiv);
 	canvas.mousePressed(setStartTimeClick);
 	
-	createPresetButtons('key maps', pitchPresets, setKeyPreset);
-	createPresetButtons('samples', samplePresets, loadSamplePreset);
+	createPresetButtons('Tonart', pitchPresets, setKeyPreset);
+	createPresetButtons('Samples', samplePresets, loadSamplePreset);
     
 	createPianoElements();
 
@@ -140,11 +140,7 @@ function preload() {
 	credits = createElement('div');
 	credits.addClass('credits');
 	credits.parent(container);
-	creditsHTML = "created by <a href=http://ericrosenbaum.com target=_blank>Eric Rosenbaum</a><br>";
-	creditsHTML += "for use with <a href=http://makeymakey.com target=_blank>Makey Makey</a><br>";
-	creditsHTML += "inspired by the <a href=http://en.wikipedia.org/wiki/Casio_SK-1 target=_blank>Casio SK-1</a><br>";
-	creditsHTML += "built with <a href=http://p5js.org target=_blank>p5.js</a><br>";
-	creditsHTML += "source code on <a href=https://github.com/ericrosenbaum/MK-1 target=_blank>github</a><br>";
+	creditsHTML = "Entwickelt von <a href=https://www.ericrosenbaum.com/mk1-sampler/ target=_blank>Eric Rosenbaum</a> | \u00fcbersetzt von <a href=https://github.com/cbmainz/MK-1 target=_blank>cbmainz</a><br>";
 	credits.html(creditsHTML);
 }
 
@@ -425,7 +421,7 @@ function setStartTimeAt(px) {
 function startRecording() {
 		if (!mic.enabled) {
 			mic.start();
-			recStatus.html('please allow mic access');
+			recStatus.html('Das Mikrofon braucht noch deine Erlaubnis');
 			return;
 		}
 		
@@ -557,33 +553,33 @@ function setPianoKeyState(num, state, color) {
 function createHelpBoxes() {    
 	boxes = [];
 
-	b = createHelpBox(50, -185, 
-		'Record your own sound to play on the keys!',
-		'Be sure to allow microphone access. Say your name, make a mouth noise, ' + 
-    	'play an instrument, sample your favorite song... or just burp');
+	b = createHelpBox(50, -190, 
+		'Samples aufnehmen',
+		'Das Mikrofon braucht die Erlaubnis, um deine eigenen Samples aufzunehmen. ' + 
+    	'Sag etwas, mache Krach, spiele ein Instrument oder mach einfach brrrrrrr.');
 	boxes.push(b);  
 	
 	b = createHelpBox(250, -190, 
-		'Play sounds', 
-		'Use your Makey Makey, use your computer keyboard, or click these keys');
+		'Spiele auf der Tastatur', 
+		'Benutze Makey Makey, deine Computertastatur oder klick auf die Tasten');
 	boxes.push(b);  
 	
 	b = createHelpBox(110, 300, 
-		'Play different notes', 
-		'Choose a keymap here');
+		'Spiele andere T\u00f6ne', 
+		'W\u00e4hle hier eine andere Tonart.');
 	boxes.push(b);  
 	
-	b = createHelpBox(160, 760, 
-		'Try different samples', 
-		'Choose a sample here',
+	b = createHelpBox(110, 770, 
+		'Versuche andere Kl\u00e4nge', 
+		'W\u00e4hle hier ein anderes Sampel.',
 		true);
 	boxes.push(b);  
 
 	b = createHelpBox(250, 770, 
-		'Change individual keys', 
-		'Click and hold the mouse on a piano key and press a keyboard key at the same time. ' +
-		'For example, click and hold the right-most key on the piano, and press the up arrow on your keyboard. ' +
-		'Now, pressing up will play that high note.',
+		'Belege die Tastatur selbst', 
+		'Klicke und halte die Maus auf einer Klaviertaste und dr\u00fccke eine Taste auf der Computertastatur. ' +
+		'Zum Beispiel, klicke und halte die Taste ganz rechts auf dem Klavier und dr\u00fccke \u2191. ' +
+		'Wenn du nun wieder \u2191 dr\u00fcckst, wird die hohe Note gespielt.', 
 		true);
 	boxes.push(b);  
 

@@ -148,7 +148,7 @@ function preload() {
 	credits = createElement('div');
 	credits.addClass('credits');
 	credits.parent(container);
-	creditsHTML = "Entwicklung <a href=https://www.ericrosenbaum.com/mk1-sampler/ target=_blank>Eric Rosenbaum</a> | \u00dcbersetzt <a href=https://github.com/cbmainz/MK-1 target=_blank>cbmainz</a> | cc by <a href=http://medienundbildung.com target=_blank>medien+bildung.com</a><br>";
+	creditsHTML = "Entwicklung <a href=https://www.ericrosenbaum.com/mk1-sampler/ target=_blank>Eric Rosenbaum</a> | \u00dcbersetzung <a href=https://github.com/cbmainz/MK-1 target=_blank>cbmainz</a> | cc by <a href=http://medienundbildung.com target=_blank>medien+bildung.com</a><br>";
 	credits.html(creditsHTML);
 }
 

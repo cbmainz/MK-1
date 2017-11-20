@@ -62,7 +62,7 @@ function preload() {
 	subtitleDiv = createElement('div');
 	subtitleDiv.addClass('subtitle');
 	subtitleDiv.parent(titlesDiv);
-	subtitleDiv.html('Sampling Keyboard f\u00FCr Makey Makey');
+	subtitleDiv.html('Sampling Keyboard für Makey Makey');
 
 	logoLink = createElement('a');
 	logoLink.attribute('href', 'http://makeymakey.com');
@@ -111,7 +111,7 @@ function preload() {
     
     waveformInstructionLabel = createElement('div');
     waveformInstructionLabel.parent(waveFormDiv);
-    waveformInstructionLabel.html('Klicke in das Feld, um die Startzeit zu ver\u00e4nden.');
+    waveformInstructionLabel.html('Klicke in das Feld, um die Startzeit zu verändern.');
     waveformInstructionLabel.addClass('notification');
     waveformInstructionLabel.style('visibility', 'hidden'); 
     
@@ -148,7 +148,7 @@ function preload() {
 	credits = createElement('div');
 	credits.addClass('credits');
 	credits.parent(container);
-	creditsHTML = "Entwicklung <a href=https://www.ericrosenbaum.com/mk1-sampler/ target=_blank>Eric Rosenbaum</a> | \u00dcbersetzung <a href=https://github.com/cbmainz/MK-1 target=_blank>cbmainz</a> | cc by <a href=http://medienundbildung.com target=_blank>medien+bildung.com</a><br>";
+	creditsHTML = "Entwicklung <a href=https://www.ericrosenbaum.com/mk1-sampler/ target=_blank>Eric Rosenbaum</a> | Übersetzung <a href=https://github.com/cbmainz/MK-1 target=_blank>cbmainz</a> | cc by <a href=http://medienundbildung.com target=_blank>medien+bildung.com</a><br>";
 	credits.html(creditsHTML);
 }
 
@@ -429,7 +429,7 @@ function setStartTimeAt(px) {
 function startRecording() {
 		if (!mic.enabled) {
 			mic.start();
-			recStatus.html('Das Mikrofon braucht noch deine Erlaubnis');
+			recStatus.html('Mikrofon erlauben');
 			return;
 		}
 		
@@ -561,7 +561,7 @@ function setPianoKeyState(num, state, color) {
 function createHelpBoxes() {    
 	boxes = [];
 
-	b = createHelpBox(62, -190, 
+	b = createHelpBox(64, -190, 
 		'Samples aufnehmen',
 		'Das Mikrofon braucht die Erlaubnis, um deine eigenen Samples aufzunehmen. ' + 
     	'Sag etwas, mache Krach, spiele ein Instrument oder mach einfach brrrrrrr.');
@@ -572,22 +572,22 @@ function createHelpBoxes() {
 		'Benutze Makey Makey, deine Computertastatur oder klick auf die Tasten');
 	boxes.push(b);  
 	
-	b = createHelpBox(110, 300, 
-		'Spiele andere T\u00f6ne', 
-		'W\u00e4hle hier eine andere Tonart.');
+	b = createHelpBox(106, 295, 
+		'Spiele andere Töne', 
+		'Wähle hier eine andere Tonart.');
 	boxes.push(b);  
 	
-	b = createHelpBox(110, 770, 
-		'Versuche andere Kl\u00e4nge', 
-		'W\u00e4hle hier ein anderes Sampel.',
+	b = createHelpBox(106, 766, 
+		'Versuche andere Klänge', 
+		'Wähle hier ein anderes Sampel.',
 		true);
 	boxes.push(b);  
 
-	b = createHelpBox(250, 770, 
+	b = createHelpBox(260, 766, 
 		'Belege die Tastatur selbst', 
-		'Klicke und halte die Maus auf einer Klaviertaste und dr\u00fccke eine Taste auf der Computertastatur. ' +
-		'Zum Beispiel, klicke und halte die Taste ganz rechts auf dem Klavier und dr\u00fccke \u2191. ' +
-		'Wenn du nun wieder \u2191 dr\u00fcckst, wird die hohe Note gespielt.', 
+		'Klicke und halte die Maus auf einer Klaviertaste und drücke eine Taste auf der Computertastatur. ' +
+		'Zum Beispiel, klicke und halte die Taste ganz rechts auf dem Klavier und drücke \u2191. ' +
+		'Wenn du nun wieder \u2191 drückst, wird die hohe Note gespielt.', 
 		true);
 	boxes.push(b);  
 

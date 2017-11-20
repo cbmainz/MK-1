@@ -19,11 +19,15 @@ Um MK-1 auch offline zu benutzen, braucht es einen HTTP-Server auf dem Rechner, 
 
 - unter **OS X/Linux** mit copy and paste dieses Kommando eingeben:
 
-```sudo npm install -g http-server```
+```
+sudo npm install -g http-server
+```
 
 - unter **Windows** mit copy and paste dieses Kommando eingeben:
 
-```npm install -g http-server```
+```
+npm install -g http-server
+```
 
 ## Quellcode der Seite Herunterladen
 
@@ -33,16 +37,22 @@ Um MK-1 auch offline zu benutzen, braucht es einen HTTP-Server auf dem Rechner, 
 
 - im Terminal unter **OS X/Linux**:
 
-```cd /Users/<USERENAME>/Downloads/MK-1-Offline-gh-pages```
+```
+cd /Users/<USERENAME>/Downloads/MK-1-Offline-gh-pages
+```
 
 - unter **Windows** mit der Eingabeaufforderung:
 
-```cd C:\Users\<USERENAME>\Documents\MK-1-Offline-gh-pages```  
+```
+cd C:\Users\<USERENAME>\Documents\MK-1-Offline-gh-pages
+```  
 
 Natürlich ```<USERENAME>``` durch den eigenen Benutzername ersetzen.
 
 3. Dann folgenden Befehl ausführen:  
-```http-server```   
+```
+http-server
+```   
 
 Fertig!
 
@@ -52,7 +62,9 @@ Fertig!
 
 2. Im Browser kann die Seite nun unter ```localhost``` aufgerufen werden: 
 
-```http://127.0.0.1:8080```
+```
+[http://127.0.0.1:8080](http://127.0.0.1:8080)
+```
 
 3. Makey Makey anschließen und los …
 

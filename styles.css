@@ -23,7 +23,7 @@ ul li {
 }
 
 .outlineBox {
-	border:2px solid #000000;
+	border:2px solid #007189;
 	border-radius:7px;
 	box-shadow:2px 3px 2px 2px #cccccc;
 	overflow:auto;
@@ -33,18 +33,27 @@ ul li {
 	position:relative;
 }
 
-.logo {
+.mm-logo {
 	position:absolute;
 	top:0;
 	right:0;
-	margin:7px;
-	width: 100px;
+	margin:10px;
+	width: 80px;
+}
+
+.mb-logo {
+	position:absolute;
+	top:8;
+	right:100;
+	margin:10px;
+	width: 200px;
 }
 
 .titles {
 	margin-left: 72;
+	margin-top: 30;
 	margin-bottom: 10;
-	color: rgb(221, 31, 31);
+	color: rgb(0, 113, 137);
 }
 
 .title {
@@ -52,6 +61,7 @@ ul li {
 	margin-right:45;
 	text-shadow: 2px 2px 2px rgb(184, 180, 180);
 	font-family: monospace;
+	font-weight: bold;
 	display:inline;
 }
 
@@ -145,19 +155,20 @@ ul li:last-of-type {
 .buttonLabel {
 	color:white;
 	text-align:center;
-	line-height: 3.5;
+	line-height: 3.8;
 	font-size: 12;
 }
 
 .helpButton {
-  background: rgb(255, 238, 170);
+  background: rgb(221, 222, 59);
   position: absolute;
   right: -75;
-  top: 20;
+  top: 30;
+  border:2px solid #007189;
 }
 
 .helpButtonLabel {
-	color: rgb(89, 86, 86);
+	color: rgb(0, 113, 137);
 	font-size:24;
 	font-weight:bold;
 	line-height:2;
@@ -180,7 +191,7 @@ ul li:last-of-type {
 
 .waveForm {
 	float:left;
-	border:2px solid black;
+	border:2px solid #007189;
 	cursor:pointer;
 	position:relative;
 }
@@ -188,7 +199,7 @@ ul li:last-of-type {
 .playHead {
 	position:absolute;
 	width:4px;
-	background:#00ff00;
+	background:#007189;
 	top:0px;
 	height:100%;
 }
@@ -204,11 +215,13 @@ input[type=radio] {
 
 .presetTitle {
 	font-size:13px;
-	color:gray;
+	font-weight: bold;
+	color:#007189;
 	height:10px;
 	padding:3px;
 	margin-top:-2px;
 	margin-left:20px;
+	margin-bottom:10px;
 	width:100px;
 }
 
@@ -218,23 +231,23 @@ input[type=radio] {
 
 .presetButton label{
 	padding:2px;
-	background: #dddddd;
+	background: #DDDE3B;
 	position:absolute;
 	width:100px;
-	color:black;
+	color:#007189;
 	font-size:13px;
 	cursor:pointer;
 }
 
 .presetButton input[type=radio]:checked + label{
-	background: #dd0000;
+	background: #007189;
 	color:white;
 }
 
 .notification {
 	position:absolute;
 	font-size:13px;
-	color:gray;
+	color:#000000;
 	width: 380;
 	text-align: right;
 	padding-top: 5px;
@@ -242,8 +255,9 @@ input[type=radio] {
 
 .arrow_box {
   position: absolute;
-  background: #FFEEAA;
-  border: 0px solid #FFEEAA;
+  margin-top: 20px;
+  background: #DDDE3B;
+  border: 0px solid #DDDE3B;
   width: 200px;
   padding: 10px;
   box-shadow: 1px 1px 3px 1px rgba(220,220,220,250);
@@ -264,20 +278,20 @@ input[type=radio] {
 
 .arrow_box:after {
   border-color: rgba(255, 255, 255, 0);
-  border-left-color: #FFEEAA;
+  border-left-color: #DDDE3B;
   border-width: 10px;
   margin-top: -10px;
 }
 
 .arrow_box:before {
   border-color: rgba(0, 0, 0, 0);
-  border-left-color: #FFEEAA;
+  border-left-color: #DDDE3B;
   border-width: 13px;
   margin-top: -13px;
 }
 
 .arrow_box_right:before, .arrow_box_right:after {
-	border-right-color: #FFEEAA;
+	border-right-color: #DDDE3B;
 	border-left-color: rgba(255, 255, 255, 0);
 	left: -20px;
 }
@@ -285,18 +299,19 @@ input[type=radio] {
 
 .helpHeading {
   font-size: 16px;
-  color: #3D3838;
+  color: #007189;
   font-weight: bold;
 }
 
 .helpBody {
   font-size: 14px;
-  color: #595656;
+  color: #007189;
+  margin-top: 4px;
 }
 
 .credits {
   padding: 5;
-  padding-top: 50;
+  padding-top: 20;
   font-size: 13px;
   color: gray;
   height: 10px;
@@ -304,4 +319,5 @@ input[type=radio] {
 
 a {
 	text-decoration:none;
+	color: #007189;
 }

@@ -11,23 +11,23 @@ Diese Version ist für die offline Verwendung gedacht.
 
 ## Node http-server installieren
 
-Um MK-1 auch offline zu benutzen, braucht es einen HTTP-Server auf dem Rechner, auf dem MK-1 mit Makey Makey laufen. Das geht ganz einfach mit Node.js und diesem Repository:
+Um MK-1 auch offline zu benutzen, braucht es einen HTTP-Server auf dem Rechner, auf dem MK-1 mit Makey Makey laufen soll. Das geht ganz einfach mit Node.js und diesem Repository:
 
 1. [Node.js downloaden und installieren](https://nodejs.org/de/download/)
 
-2. Das Terminal unter **OS X/Linux** oder die Eingabeaufforderung unter **Windows** öffnen:
+2. Das Terminal unter **OS X/Linux** oder die Eingabeaufforderung unter **Windows** (ggf. als Administrator) öffnen:
 
 - unter **OS X/Linux** mit copy and paste dieses Kommando eingeben:
 
 ```sudo npm install -g http-server```
 
-- unter **Windows** mit copy and paste dieses Kommando eingeben (ggf. als Administrator die Eingabeaufforderung ausführen):
+- unter **Windows** mit copy and paste dieses Kommando eingeben:
 
 ```npm install -g http-server```
 
 ## Quellcode der Seite Herunterladen
 
-1. [Dieses Github Repository herunterladen](https://github.com/medienundbildung-com/MK-1-Offline/) (entweder über ```git clone``` oder die ZIP-Datei herunter laden und entpacken).
+1. Dieses Github Repository herunterladen (entweder über ```git clone``` oder die [ZIP-Datei herunterladen](https://github.com/medienundbildung-com/MK-1-Offline/archive/gh-pages.zip) und entpacken).
 
 2. Mit ```cd``` in das entsprechende Verzeichnis wechseln, bspw. mit (natürlich je nachdem, wohin die ZIP-Datei entpackt wurde):
 
@@ -37,13 +37,12 @@ Um MK-1 auch offline zu benutzen, braucht es einen HTTP-Server auf dem Rechner, 
 
 - unter **Windows** mit der Eingabeaufforderung:
 
-```cd C:\Users\<USERENAME>\Documents\MK-1-Offline-gh-pages``` 
+```cd C:\Users\<USERENAME>\Documents\MK-1-Offline-gh-pages```  
 
 Natürlich ```<USERENAME>``` durch den eigenen Benutzername ersetzen.
 
-3. Dann folgenden Befehl ausführen:
-
-```http-server```
+3. Dann folgenden Befehl ausführen:  
+```http-server```   
 
 Fertig!
 
@@ -53,7 +52,7 @@ Fertig!
 
 2. Im Browser kann die Seite nun unter ```localhost``` aufgerufen werden: 
 
-```http://127.0.0.1:8080``
+```http://127.0.0.1:8080```
 
 3. Makey Makey anschließen und los …
 

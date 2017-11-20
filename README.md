@@ -7,5 +7,5 @@ Umgesetzt mit [p5.js](https://p5js.org)
 Original von [Eric Rosenbaum](https://www.ericrosenbaum.com/mk1-sampler/)  
 Deutsche Übersetzung von [cbmainz](https://github.com/cbmainz/MK-1) 
 
-Teste es unter [mk-1.crowdapp.de](https://mk-1.crowdapp.de/)  
-Offline Version [github.com](https://github.com/medienundbildung-com/MK-1-Offline)
+[Unter mk-1.crowdapp.de testen](https://mk-1.crowdapp.de/)  
+[Offline Version](https://github.com/medienundbildung-com/MK-1-Offline)

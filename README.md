@@ -43,7 +43,7 @@ npm install -g http-server
 cd /Users/<USERENAME>/Downloads/MK-1-Offline-gh-pages
 ```
 
-- unter **Windows** mit der Eingabeaufforderung:
+- unter **Windows** (nach der Installation von Node.js gibt es eine weitere Eingabeaufforderung ```Node.js command prompt```, diese dafür benutzen):
 
 ```
 cd C:\Users\<USERENAME>\Documents\MK-1-Offline-gh-pages

@@ -70,15 +70,7 @@ function preload() {
 	logoLink.parent(outlineDiv);
 	logo = createImg('images/makey-makey-logo.svg');
 	logo.parent(logoLink);
-	logo.addClass('mm-logo');
-	
-	logoLink = createElement('a');
-	logoLink.attribute('href', 'http://medienundbildung.com');
-	logoLink.attribute('target', '_blank');
-	logoLink.parent(outlineDiv);
-	logo = createImg('images/m+b-logo.svg');
-	logo.parent(logoLink);
-	logo.addClass('mb-logo');
+	logo.addClass('logo');
 
 	controlsDiv = createElement('div');
 	controlsDiv.addClass('controls');

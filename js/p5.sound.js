@@ -1063,15 +1063,8 @@ soundfile = function () {
       this.output.gain.value = a;
       // not necessary with _initBufferSource ?
       // this.bufferSourceNode.playbackRate.cancelScheduledValues(now);
-
       rate = rate || Math.abs(this.playbackRate);
-      // this.bufferSourceNode.playbackRate.setValueAtTime(rate, now); 
-      // ericr version:
-      // this.bufferSourceNode.playbackRate.value = rate; 
-      // console.log(this.bufferSourceNode.playbackRate.value);
-      // ericr version 2:
-      this.rate(rate);
-
+      this.bufferSourceNode.playbackRate.setValueAtTime(rate, now);
       // if it was paused, play at the pause position
       if (this._paused) {
         this.bufferSourceNode.start(time, this.pauseTime, duration);
@@ -1482,11 +1475,7 @@ soundfile = function () {
     if (this.bufferSourceNode) {
       var now = p5sound.audiocontext.currentTime;
       this.bufferSourceNode.playbackRate.cancelScheduledValues(now);
-      // ericr changes:
-      // this.bufferSourceNode.playbackRate.linearRampToValueAtTime(Math.abs(rate), now);
-      this.bufferSourceNode.playbackRate.value = Math.abs(rate);
-
-
+      this.bufferSourceNode.playbackRate.linearRampToValueAtTime(Math.abs(rate), now);
       this._counterNode.playbackRate.cancelScheduledValues(now);
       this._counterNode.playbackRate.linearRampToValueAtTime(Math.abs(rate), now);
     }

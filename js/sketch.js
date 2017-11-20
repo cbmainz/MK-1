@@ -70,7 +70,15 @@ function preload() {
 	logoLink.parent(outlineDiv);
 	logo = createImg('images/makey-makey-logo.svg');
 	logo.parent(logoLink);
-	logo.addClass('logo');
+	logo.addClass('mm-logo');
+	
+	logoLink = createElement('a');
+	logoLink.attribute('href', 'http://medienundbildung.com');
+	logoLink.attribute('target', '_blank');
+	logoLink.parent(outlineDiv);
+	logo = createImg('images/m+b-logo.svg');
+	logo.parent(logoLink);
+	logo.addClass('mb-logo');
 
 	controlsDiv = createElement('div');
 	controlsDiv.addClass('controls');
@@ -140,7 +148,7 @@ function preload() {
 	credits = createElement('div');
 	credits.addClass('credits');
 	credits.parent(container);
-	creditsHTML = "Entwickelt von <a href=https://www.ericrosenbaum.com/mk1-sampler/ target=_blank>Eric Rosenbaum</a> | \u00fcbersetzt von <a href=https://github.com/cbmainz/MK-1 target=_blank>cbmainz</a><br>";
+	creditsHTML = "Entwickelt von <a href=https://www.ericrosenbaum.com/mk1-sampler/ target=_blank>Eric Rosenbaum</a> | \u00fcbersetzt von <a href=https://github.com/cbmainz/MK-1 target=_blank>cbmainz</a> | cc by <a href=http://medienundbildung.com target=_blank>medien+bildung.com</a><br>";
 	credits.html(creditsHTML);
 }
 
@@ -553,7 +561,7 @@ function setPianoKeyState(num, state, color) {
 function createHelpBoxes() {    
 	boxes = [];
 
-	b = createHelpBox(50, -190, 
+	b = createHelpBox(62, -190, 
 		'Samples aufnehmen',
 		'Das Mikrofon braucht die Erlaubnis, um deine eigenen Samples aufzunehmen. ' + 
     	'Sag etwas, mache Krach, spiele ein Instrument oder mach einfach brrrrrrr.');
